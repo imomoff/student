@@ -2,12 +2,14 @@ package db;
 
 import entity.Student;
 
+import java.util.List;
+
 public class StudenRepository implements Repository<Student> {
 
-
+    private static List<Student> students;
     @Override
     public void create(Student student) {
-        
+        students.add(student);
     }
 
     @Override
